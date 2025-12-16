@@ -59,9 +59,24 @@ SOONG_CONFIG_qtidisplay += \
     default \
     var1 \
     var2 \
-    var3
+    var3 \
+    hwasan \
+    llvmcov \
+    mapper_ext \
+    ubwcp_headers \
+    wide_color \
+    target_kernel_version \
+    target_no_camera_custom_format \
+    target_no_raw10_custom_format \
+    target_uses_aligned_ycbcr_height \
+    target_uses_aligned_ycrcb_height \
+    target_uses_unaligned_nv21_zsl \
+    target_uses_unaligned_ycrcb \
+    target_uses_ycrcb_camera_preview \
+    target_uses_ycrcb_venus_camera_preview
 
 # Set default values for qtidisplay config
+SOONG_CONFIG_qtidisplay_composer_version ?= v3_3
 SOONG_CONFIG_qtidisplay_drmpp ?= false
 SOONG_CONFIG_qtidisplay_headless ?= false
 SOONG_CONFIG_qtidisplay_llvmsa ?= false
@@ -69,9 +84,27 @@ SOONG_CONFIG_qtidisplay_gralloc4 ?= false
 SOONG_CONFIG_qtidisplay_displayconfig_enabled ?= false
 SOONG_CONFIG_qtidisplay_udfps ?= false
 SOONG_CONFIG_qtidisplay_default ?= true
+SOONG_CONFIG_qtidisplay_master_side_cp ?= false
+SOONG_CONFIG_qtidisplay_shift_horizontal ?= 0
+SOONG_CONFIG_qtidisplay_shift_vertical ?= 0
+SOONG_CONFIG_qtidisplay_smmu_proxy ?= false
 SOONG_CONFIG_qtidisplay_var1 ?= false
 SOONG_CONFIG_qtidisplay_var2 ?= false
 SOONG_CONFIG_qtidisplay_var3 ?= false
+SOONG_CONFIG_qtidisplay_hwasan ?= false
+SOONG_CONFIG_qtidisplay_llvmcov ?= false
+SOONG_CONFIG_qtidisplay_mapper_ext ?= true
+SOONG_CONFIG_qtidisplay_ubwcp_headers ?= false
+SOONG_CONFIG_qtidisplay_wide_color ?= false
+SOONG_CONFIG_qtidisplay_target_kernel_version ?= 0
+SOONG_CONFIG_qtidisplay_target_no_camera_custom_format ?= false
+SOONG_CONFIG_qtidisplay_target_no_raw10_custom_format ?= false
+SOONG_CONFIG_qtidisplay_target_uses_aligned_ycbcr_height ?= false
+SOONG_CONFIG_qtidisplay_target_uses_aligned_ycrcb_height ?= false
+SOONG_CONFIG_qtidisplay_target_uses_unaligned_nv21_zsl ?= false
+SOONG_CONFIG_qtidisplay_target_uses_unaligned_ycrcb ?= false
+SOONG_CONFIG_qtidisplay_target_uses_ycrcb_camera_preview ?= false
+SOONG_CONFIG_qtidisplay_target_uses_ycrcb_venus_camera_preview ?= false
 
 # Add rfs to soong config namespaces
 SOONG_CONFIG_NAMESPACES += rfs
