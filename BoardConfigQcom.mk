@@ -149,6 +149,13 @@ ifneq ($(filter $(UM_5_4_FAMILY) $(UM_5_10_FAMILY) $(UM_5_15_FAMILY),$(TARGET_BO
     SOONG_CONFIG_qtidisplay_gralloc4 := true
 endif
 
+# Enable no_camera_custom_format on UM 4.14 platforms with kernel 4.19 upgrade
+ifeq ($(TARGET_KERNEL_VERSION),4.19)
+ifneq ($(filter $(UM_4_14_FAMILY),$(TARGET_BOARD_PLATFORM)),)
+    SOONG_CONFIG_qtidisplay_target_no_camera_custom_format := true
+endif
+endif
+
 # Enable Supported halls on UM 4.9 platforms with kernel 4.19 upgrade
 ifeq ($(TARGET_KERNEL_VERSION),4.19)
 ifneq ($(filter $(UM_4_9_FAMILY),$(TARGET_BOARD_PLATFORM)),)
